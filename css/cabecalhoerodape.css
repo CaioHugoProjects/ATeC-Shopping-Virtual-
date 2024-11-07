@@ -1,0 +1,159 @@
+/* Estilização Geral */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #2c3e50;
+}
+/* Estilo do Cabeçalho */
+header {
+    background-color: #6aceff; /* Vermelho Claro */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 190px; /* Altura fixa do cabeçalho */
+    box-sizing: border-box; /* Inclui padding e bordas na altura total */
+}
+
+header .top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header .logo {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+header .logo img {
+    height: 140px; /* Altura da logo será 90% da altura do cabeçalho */
+    max-height: 150px; /* Limite máximo opcional para a altura da logo */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+header nav {
+    display: flex;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: flex-end; /* Alinha os links à direita */
+    margin-left: auto; /* Cria o espaçamento entre a logo e os links */
+    gap: 30px; /* Espaçamento maior entre os links */
+}
+
+nav .nav {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-size: 16pt;
+}
+
+nav .nav:hover {
+    color: rgb(10, 76, 151); /* Laranja */}
+
+header .search-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -15px; /* Ajuste a margem superior para subir a barra de pesquisa */
+}
+
+
+header form {
+    display: flex;
+    width: 100%; /* Faz com que o formulário ocupe toda a largura disponível */
+    max-width: 600px; /* Limita a largura máxima do formulário */
+}
+
+form input[type="search"] {
+    padding: 10px; /* Aumenta o padding para um campo de pesquisa maior */
+    border: 2px solid #2c3e50; /* Cinza Escuro */
+    border-radius: 5px;
+    margin-right: 5px;
+    flex: 1; /* Faz com que o campo de pesquisa ocupe a maior parte da largura disponível */
+}
+
+form button {
+    padding: 10px 20px; /* Aumenta o tamanho do botão */
+    background-color: #030fb6; /* Laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: rgb(11, 2, 100); /* Tom mais escuro de laranja */
+}   
+/* Estilo do Rodapé */
+footer {
+    background-color: #2c3e50; /* Cinza Escuro */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+    padding: 10px;
+}
+.footer-section img{
+    width: 100%;
+    height: 200px;
+}
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 2px solid rgb(10, 76, 151); /* Vermelho Claro */
+    border-radius: 5px;
+}
+
+.footer-section button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #030fb6; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section button:hover {
+    background-color: rgb(10, 76, 151); /* Tom mais escuro de verde */
+}
+
+.footer-section a {
+    color: white; /* Laranja */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: rgb(10, 76, 151); /* Tom mais escuro de laranja */
+    
+}
+
+.lastline {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bdc3c7; /* Cinza Claro */
+}

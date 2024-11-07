@@ -1,0 +1,78 @@
+/* Seção de Notícias */
+.noticias {
+    background-color: #ffffff; /* Fundo branco */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.noticias h2 {
+    color: #006064; /* Azul real */
+}
+
+.noticia-destaque {
+    margin-bottom: 20px;
+}
+
+.noticia-destaque img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.outras-noticias ul {
+    list-style: none;
+    padding: 0;
+}
+
+.outras-noticias li {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.outras-noticias li:hover {
+    background-color: #e0e0e0;
+}
+
+.outras-noticias h5 {
+    margin: 0;
+    color: #3e2723;
+}
+
+/* Seção de Dicas */
+.dicas {
+    background-color: #e1f5fe; /* Azul ciano muito claro */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dicas h2 {
+    color: #006064; /* Azul real */
+}
+
+.dicas ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.dicas li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #424242;
+}
+
+/* Botão de 'Leia Mais' */
+a {
+    text-decoration: none;
+    color: #00796b; /* Azul real escuro */
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATe.C Shopping - Contato</title>
+    <link rel="stylesheet" href="css/contato.css">
+    <link rel="stylesheet" href="css/cabecalhoerodape.css">
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div class="logo">
+                <img src="img/logo.png" alt="ATe.C logo">
+            </div>
+            <nav>
+                <a href="index.html" class="nav">Home</a>
+                <a href="loja.html" class="nav">Loja</a>
+                <a href="contato.html" class="nav">Contato</a>
+                <a href="cadastro.html" class="nav">Cadastrar-se/Login</a>  
+            </nav>
+        </div>
+        <div class="search-row">
+            <form action="">
+                <input type="search" placeholder="Pesquisar...">
+                <button type="submit">GO.</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Área de Exibição -->
+    <main>
+        <div class="main-content">
+            <!-- Seção de Queixas e Avaliações -->
+            <section class="feedback-section">
+                <h2>Queixas e Avaliações</h2>
+                <form>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    
+                    <label for="store">Loja:</label>
+                    <select id="store" name="store">
+                        <option value="all">Todas as Lojas</option>
+                        <option value="store1">Loja 1</option>
+                        <option value="store2">Loja 2</option>
+                        <!-- Adicione mais opções conforme necessário -->
+                    </select>
+                    
+                    <label for="feedback-type">Tipo de Feedback:</label>
+                    <select id="feedback-type" name="feedback-type">
+                        <option value="complaint">Queixa</option>
+                        <option value="review">Avaliação</option>
+                    </select>
+                    
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+                    
+                    <button type="submit">Enviar Feedback</button>
+                </form>
+            </section>
+
+            <!-- Seção Sobre Nós -->
+            <section class="about-section">
+                <h2>Sobre Nós</h2>
+                <p>O ATe.C Shopping é uma plataforma dedicada a proporcionar a melhor experiência de compra online, conectando clientes a uma ampla variedade de lojas e produtos. Nossa missão é oferecer um ambiente seguro e intuitivo para compras, com suporte de alta qualidade e uma vasta gama de produtos para atender a todas as necessidades.</p>
+                <p>Desenvolvido com tecnologia de ponta e um design moderno, o ATe.C Shopping se compromete em manter um alto padrão de serviço e inovação. Agradecemos pelo seu interesse e apoio contínuo.</p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Avaliação</h3>
+                <textarea placeholder="Escreva sua avaliação aqui"></textarea>
+                <button type="button">Enviar</button>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (00) 1234-5678</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com">Instagram</a><br>
+                <a href="https://www.facebook.com">Facebook</a><br>
+                <a href="https://www.whatsapp.com">Whatsapp</a>
+            </div>
+            <div class="footer-section">
+                <h3>Sustentabilidade</h3>
+               <a href="sustentabilidade.html"><img src="img/sustentabilidade.png" alt="Capa Sustentabilidade"></a> 
+            </div>
+        </div>
+        <p class="lastline">ATe.C Shopping Virtual | &copy; Direitos autorais reservados</p>
+    </footer>
+</body>
+</html>

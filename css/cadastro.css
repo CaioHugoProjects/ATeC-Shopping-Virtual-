@@ -1,0 +1,168 @@
+/* Estilo do Conteúdo Principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Seção de Formulário */
+.form-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Título do formulário */
+.form-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Layout do Formulário */
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    margin-top: 8px;
+    padding: 12px;
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar nos campos */
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    border-color: rgb(11, 2, 100);;
+    box-shadow: 0 0 8px rgba(15, 30, 95, 0.5);
+    outline: none;
+}
+
+/* Botão de envio */
+.form-section button {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #030fb6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section button:hover {
+    background-color:rgb(11, 2, 100);
+    box-shadow: 0 5px 20px rgba(211, 84, 0, 0.4);
+}
+
+/* Botões de alternância */
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.toggle-buttons button {
+    margin: 0 15px;
+    padding: 12px 25px;
+    background-color: #030fb6; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-buttons button:hover {
+    background-color: rgb(11, 2, 100);
+}
+.image-preview {
+    padding: 15px;
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.image-preview:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+}
+
+.image-preview p {
+    font-style: italic;
+    color: #555;
+}
+
+.image-preview img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Mantém o conteúdo centralizado na imagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Efeito de sombra */
+    transition: all 0.3s ease-in-out; /* Transição suave para os efeitos */
+    margin-top: 10px;
+}
+
+.image-preview img:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Efeito de hover na imagem */
+    transform: scale(1.05); /* Leve efeito de zoom ao passar o mouse */
+}
+.preview{
+    background-color: #f9f9f9;
+    gap: 20px;
+    display: flex;
+    align-items: center ;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form-section {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .form-section h2 {
+        font-size: 1.5em;
+    }
+
+    .toggle-buttons button {
+        margin: 5px 10px;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,174 @@
+/* Estilo do Conteúdo Principal */
+.main-content {
+    justify-content: space-between;
+    padding: 30px;
+}
+
+/* Sidebar de Filtros */
+.filter-sidebar {
+    background-color: #ffffff;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa 100% da largura */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.filter-sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Aumenta o tamanho do título */
+    color: #333; /* Cor do texto */
+    border-bottom: 2px solid #030fb6; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+.filter-sidebar form {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-sidebar label {
+    margin-top: 15px;
+    font-weight: bold; /* Negrito para melhor destaque */
+}
+
+.filter-sidebar select,
+.filter-sidebar button {
+    margin-top: 10px;
+    padding: 12px; /* Aumenta o padding para botões e selects */
+    border: 2px solid #2c3e50; /* Cinza Escuro */
+    border-radius: 5px;
+    font-size: 1em; /* Tamanho de fonte maior */
+    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transições */
+}
+
+.filter-sidebar select:focus,
+.filter-sidebar button:focus {
+    border-color: #030fb6; /* Cor ao focar */
+}
+
+.filter-sidebar button {
+    background-color: #030fb6; /* Cor do botão */
+    color: white;
+    cursor: pointer;
+}
+
+.filter-sidebar button:hover {
+    background-color: rgb(11, 2, 100); /* Tom mais escuro ao passar o mouse */
+}
+
+/* Lista de Lojas */
+.store-list {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px; /* Bordas mais arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ocupa 100% da largura */
+    height: 500px; /* Definindo uma altura fixa */
+    overflow-y: auto; /* Rolagem vertical quando necessário */
+}
+
+.store-list h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em; /* Aumenta o tamanho do título */
+    color: #333; /* Cor do texto */
+    border-bottom: 2px solid #030fb6; /* Linha abaixo do título */
+    padding-bottom: 10px; /* Espaçamento inferior */
+}
+
+.store-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fundo claro para os itens */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições */
+}
+
+.store-item:hover {
+    transform: translateY(-5px); /* Efeito de deslocamento ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+
+.store-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.store-item h3 {
+    margin: 10px 0 5px;
+    color: #2c3e50; /* Cor do título */
+}
+
+.store-item p {
+    margin: 0 0 10px;
+    color: #555; /* Cor do texto do parágrafo */
+}
+
+.store-item a {
+    color: #030fb6; /* Cor do link */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Transição de cor */
+}
+
+.store-item a:hover {
+    color: rgb(11, 2, 100); /* Tom mais escuro de azul */
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Anúncios */
+.ads {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ads h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Cor de texto */
+}
+
+/* Grade de anúncios */
+.ad-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilização dos itens de anúncio */
+.ad-item {
+    background-color: #f9f9f9;
+    padding: 15px; /* Aumentado para mais conforto */
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Garante que o anúncio ocupe a largura da coluna */
+    max-width: 250px; /* Limita a largura máxima de cada anúncio */
+    transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+.ad-item:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
+}
+
+.ad-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordas arredondadas para imagens */
+    margin-bottom: 10px;
+}
+
+.ad-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555; /* Cor de texto mais suave */
+}
+
+/* Estilos para animações e transições suaves */
+.ad-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para sombra e transformação */
+}

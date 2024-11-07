@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATe.C Shopping - Loja</title>
+    <link rel="stylesheet" href="css/loja.css">
+    <link rel="stylesheet" href="css/cabecalhoerodape.css">
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div class="logo">
+                <img src="img/logo.png" alt="ATe.C logo">
+            </div>
+            <nav>
+                <a href="index.html" class="nav">Home</a>
+                <a href="loja.html" class="nav">Loja</a>
+                <a href="contato.html" class="nav">Contato</a>
+                <a href="cadastro.html" class="nav">Cadastrar-se/Login</a>  
+            </nav>
+        </div>
+        <div class="search-row">
+            <form action="">
+                <input type="search" placeholder="Pesquisar...">
+                <button type="submit">GO.</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Área de Exibição -->
+    <main>
+        <div class="main-content">
+            <!-- Filtros de Lojas -->
+            <aside class="filter-sidebar">
+                <h2>Filtros de Lojas</h2>
+                <form>
+                    <label for="category">Categoria:</label>
+                    <select id="category" name="category">
+                        <option value="all">Todos</option>
+                        <option value="electronics">Eletrônicos</option>
+                        <option value="clothing">Roupas</option>
+                        <option value="home">Casa e Jardim</option>
+                    </select>
+
+                    <label for="rating">Avaliação:</label>
+                    <select id="rating" name="rating">
+                        <option value="all">Todas</option>
+                        <option value="5">5 Estrelas</option>
+                        <option value="4">4 Estrelas</option>
+                        <option value="3">3 Estrelas</option>
+                    </select>
+
+                    <button type="submit">Aplicar Filtros</button>
+                </form>
+            </aside>
+
+            <!-- Lista de Lojas -->
+            <section class="store-list">
+                <h2>Lojas Participantes</h2>
+                <div class="store-item">
+                    <img src="img/store1.jpg" alt="Loja 1">
+                    <h3>Loja 1</h3>
+                    <p>Descrição da Loja 1. Oferece uma ampla gama de produtos eletrônicos.</p>
+                    <a href="#">Visite a Loja</a>
+                </div>
+                <div class="store-item">
+                    <img src="img/store2.jpg" alt="Loja 2">
+                    <h3>Loja 2</h3>
+                    <p>Descrição da Loja 2. Especializada em roupas e acessórios de moda.</p>
+                    <a href="#">Visite a Loja</a>
+                </div>
+                <div class="store-item">
+                    <img src="img/store3.jpg" alt="Loja 3">
+                    <h3>Loja 3</h3>
+                    <p>Descrição da Loja 3. Produtos para casa e jardim de alta qualidade.</p>
+                    <a href="#">Visite a Loja</a>
+                </div>
+                <!-- Adicione mais lojas conforme necessário -->
+            </section>
+
+            <aside class="ads">
+                <h2>Anúncios</h2>
+                <div class="ad-list">
+                    <div class="ad-item">
+                        <img src="img/ad1.jpg" alt="Anúncio 1">
+                        <p>Anúncio 1</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="img/ad2.jpg" alt="Anúncio 2">
+                        <p>Anúncio 2</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="img/ad3.jpg" alt="Anúncio 3">
+                        <p>Anúncio 3</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="img/ad4.jpg" alt="Anúncio 4">
+                        <p>Anúncio 4</p>
+                    </div>
+                    <div class="ad-item">
+                        <img src="img/ad5.jpg" alt="Anúncio 5">
+                        <p>Anúncio 5</p>
+                    </div>
+                </div>
+            </aside>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Avaliação</h3>
+                <textarea placeholder="Escreva sua avaliação aqui"></textarea>
+                <button type="button">Enviar</button>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (00) 1234-5678</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com">Instagram</a><br>
+                <a href="https://www.facebook.com">Facebook</a><br>
+                <a href="https://www.whatsapp.com">Whatsapp</a>
+            </div>
+            <div class="footer-section">
+                <h3>Sustentabilidade</h3>
+               <a href="sustentabilidade.html"><img src="img/sustentabilidade.png" alt="Capa Sustentabilidade"></a> 
+            </div>
+        </div>
+        <p class="lastline">ATe.C Shopping Virtual | &copy; Direitos autorais reservados</p>
+    </footer>
+</body>
+</html>

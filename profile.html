@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil da Loja - ATe.C Shopping</title>
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/cabecalhoerodape.css">
+</head>
+<body>
+    <header>
+        <div class="top-row">
+            <div class="logo">
+                <img src="img/logo.png" alt="ATe.C logo">
+            </div>
+            <nav>
+                <a href="index.html" class="nav">Home</a>
+                <a href="loja.html" class="nav">Loja</a>
+                <a href="contato.html" class="nav">Contato</a>
+                <a href="cadastro.html" class="nav">Cadastrar-se/Login</a>  
+            </nav>
+        </div>
+        <div class="search-row">
+            <form action="">
+                <input type="search" placeholder="Pesquisar...">
+                <button type="submit">GO.</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <!-- Informações da Loja -->
+            <section class="store-info">
+                <h1>Perfil da Loja</h1>
+                <div class="store-details">
+                    <div class="store-logo">
+                        <img src="img/store-logo.jpg" alt="Logo da Loja">
+                    </div>
+                    <div class="store-details-text">
+                        <h2>Nome da Loja</h2>
+                        <p><strong>Descrição:</strong> Breve descrição sobre a loja.</p>
+                        <p><strong>Endereço:</strong> Rua Exemplo, 123, Cidade, Estado</p>
+                        <p><strong>Telefone:</strong> (00) 1234-5678</p>
+                        <p><strong>Email:</strong> loja@exemplo.com</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Produtos da Loja -->
+            <section class="store-products">
+                <h2>Produtos da Loja</h2>
+                <div class="product-list">
+                    <!-- Exemplo de produtos -->
+                    <div class="product-item">
+                        <img src="img/product1.jpg" alt="Produto 1">
+                        <h3>Produto 1</h3>
+                        <p>Descrição breve do produto.</p>
+                        <p>R$99,90</p>
+                    </div>
+                    <div class="product-item">
+                        <img src="img/product2.jpg" alt="Produto 2">
+                        <h3>Produto 2</h3>
+                        <p>Descrição breve do produto.</p>
+                        <p>R$199,90</p>
+                    </div>
+                    <!-- Adicione mais produtos conforme necessário -->
+                </div>
+            </section>
+
+            <!-- Adicionar Novo Produto -->
+            <section class="add-product">
+                <h2>Adicionar Novo Produto</h2>
+                <form id="add-product-form">
+                    <label for="product-name">Nome do Produto:</label>
+                    <input type="text" id="product-name" name="product-name" required>
+
+                    <label for="product-description">Descrição:</label>
+                    <textarea id="product-description" name="product-description" required></textarea>
+
+                    <label for="product-price">Preço:</label>
+                    <input type="text" id="product-price" name="product-price" required>
+
+                    <label for="product-image">Imagem do Produto:</label>
+                    <input type="file" id="product-image" name="product-image" accept="image/*">
+
+                    <button type="submit">Adicionar Produto</button>
+                </form>
+            </section>
+
+            <!-- Adicionar Promoção -->
+            <section class="add-promotion">
+                <h2>Adicionar Promoção</h2>
+                <form id="add-promotion-form">
+                    <label for="promotion-title">Título da Promoção:</label>
+                    <input type="text" id="promotion-title" name="promotion-title" required>
+
+                    <label for="promotion-details">Detalhes da Promoção:</label>
+                    <textarea id="promotion-details" name="promotion-details" required></textarea>
+
+                    <label for="promotion-start">Data de Início:</label>
+                    <input type="date" id="promotion-start" name="promotion-start" required>
+
+                    <label for="promotion-end">Data de Fim:</label>
+                    <input type="date" id="promotion-end" name="promotion-end" required>
+
+                    <button type="submit">Adicionar Promoção</button>
+                </form>
+            </section>
+
+            <!-- Adicionar Anúncio -->
+            <section class="add-advertisement">
+                <h2>Adicionar Anúncio</h2>
+                <form id="add-advertisement-form">
+                    <label for="advertisement-title">Título do Anúncio:</label>
+                    <input type="text" id="advertisement-title" name="advertisement-title" required>
+
+                    <label for="advertisement-details">Detalhes do Anúncio:</label>
+                    <textarea id="advertisement-details" name="advertisement-details" required></textarea>
+
+                    <label for="advertisement-image">Imagem do Anúncio:</label>
+                    <input type="file" id="advertisement-image" name="advertisement-image" accept="image/*">
+
+                    <button type="submit">Adicionar Anúncio</button>
+                </form>
+            </section>
+
+            <!-- Painel de Administração -->
+            <section class="admin-panel">
+                <h2>Painel de Administração</h2>
+                <form id="admin-form">
+                    <label for="store-name">Nome da Loja:</label>
+                    <input type="text" id="store-name" name="store-name" value="Nome da Loja" required>
+
+                    <label for="store-description">Descrição:</label>
+                    <textarea id="store-description" name="store-description" required>Breve descrição sobre a loja.</textarea>
+
+                    <label for="store-address">Endereço:</label>
+                    <input type="text" id="store-address" name="store-address" value="Rua Exemplo, 123, Cidade, Estado" required>
+
+                    <label for="store-phone">Telefone:</label>
+                    <input type="tel" id="store-phone" name="store-phone" value="(00) 1234-5678" required>
+
+                    <label for="store-email">Email:</label>
+                    <input type="email" id="store-email" name="store-email" value="loja@exemplo.com" required>
+
+                    <button type="submit">Atualizar Informações</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Avaliação</h3>
+                <textarea placeholder="Escreva sua avaliação aqui"></textarea>
+                <button type="button">Enviar</button>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (00) 1234-5678</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com">Instagram</a><br>
+                <a href="https://www.facebook.com">Facebook</a><br>
+                <a href="https://www.whatsapp.com">Whatsapp</a>
+            </div>
+            <div class="footer-section">
+                <h3>Sustentabilidade</h3>
+               <a href="sustentabilidade.html"><img src="img/sustentabilidade.png" alt="Capa Sustentabilidade"></a> 
+            </div>
+        </div><div class="footer-container">
+            <div class="footer-section">
+                <h3>Avaliação</h3>
+                <textarea placeholder="Escreva sua avaliação aqui"></textarea>
+                <button type="button">Enviar</button>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@exemplo.com</p>
+                <p>Telefone: (00) 1234-5678</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <a href="https://www.instagram.com">Instagram</a><br>
+                <a href="https://www.facebook.com">Facebook</a><br>
+                <a href="https://www.whatsapp.com">Whatsapp</a>
+            </div>
+            <div class="footer-section">
+                <h3>Sustentabilidade</h3>
+               <a href="sustentabilidade.html"><img src="img/sustentabilidade.png" alt="Capa Sustentabilidade"></a> 
+            </div>
+        </div>
+        <p class="lastline">ATe.C Shopping Virtual | &copy; Direitos autorais reservados</p>
+    </footer>
+</body>
+</html>

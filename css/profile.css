@@ -1,0 +1,146 @@
+/* Estilo do Conteúdo Principal */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Informações da Loja */
+.store-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.store-info .store-details {
+    display: flex;
+    align-items: center;
+}
+
+.store-info .store-logo img {
+    max-width: 200px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.store-info .store-details-text {
+    max-width: 500px;
+}
+
+.store-info h1 {
+    margin-bottom: 20px;
+}
+
+.store-info h2 {
+    margin-bottom: 10px;
+}
+
+/* Produtos da Loja */
+.store-products {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.store-products h2 {
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-item h3 {
+    margin: 10px 0 5px;
+}
+
+.product-item p {
+    margin: 0 0 10px;
+}
+
+/* Adicionar Novo Produto */
+.add-product,
+.add-promotion,
+.add-advertisement,
+.admin-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.add-product h2,
+.add-promotion h2,
+.add-advertisement h2,
+.admin-panel h2 {
+    margin-bottom: 20px;
+}
+
+.add-product form,
+.add-promotion form,
+.add-advertisement form,
+.admin-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-product label,
+.add-promotion label,
+.add-advertisement label,
+.admin-panel label {
+    margin-top: 10px;
+}
+
+.add-product input,
+.add-promotion input,
+.add-advertisement input,
+.add-product textarea,
+.add-promotion textarea,
+.add-advertisement textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid #2c3e50; /* Cinza Escuro */
+    border-radius: 5px;
+}
+
+.add-product button,
+.add-promotion button,
+.add-advertisement button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #e67e22; /* Laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-product button:hover,
+.add-promotion button:hover,
+.add-advertisement button:hover {
+    background-color: #d35400; /* Tom mais escuro de laranja */
+}

@@ -1,0 +1,220 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+/* Estilo do Conteúdo Principal */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Promoções */
+.promotions {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px; /* Bordas mais arredondadas */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease; /* Transição para sombra */
+}
+
+.promotions:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.promotion-slider {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Ajuste a altura conforme necessário */
+}
+
+.promotion-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.promotion-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.promotion-slide.active {
+    opacity: 1;
+}
+
+/* Seção de Filtros e Produtos */
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Filtros */
+.filters {
+    background-color: #fff;
+    padding: 20px; /* Aumentado para mais espaço */
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Espaçamento entre filtros e produtos */
+    transition: box-shadow 0.3s ease; /* Transição para sombra */
+}
+
+.filters:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+}
+
+.filters form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.filters label {
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+.filters select,
+.filters input[type="range"] {
+    flex: 2;
+    margin-bottom: 10px;
+}
+
+.filters button {
+    padding: 10px 20px;
+    background-color: #030fb6; /* Cor laranja */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+}
+
+.filters button:hover {
+    background-color:rgb(11, 2, 100); /* Tom mais escuro */
+    transform: scale(1.05); /* Efeito de zoom */
+}
+
+/* Produtos */
+.products {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1; /* Produtos ocupam a maior parte do espaço */
+    overflow-y: auto; /* Rolagem vertical se necessário */
+    height: 85vh; /* Para dar destaque aos produtos */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tamanho fixo dos itens de produtos */
+.product-item {
+    flex: 1 1 calc(20% - 20px); /* Itens ocupam 20% da largura */
+    background-color: #f9f9f9;
+    padding: 15px; /* Aumentado para mais conforto */
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 250px; /* Altura fixa para os itens de produto */
+    position: relative; /* Para posicionamento da imagem */
+    overflow: hidden; /* Para ocultar partes da imagem que ultrapassam */
+    transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+.product-item:hover {
+    transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 100%; /* A altura da imagem ocupa 100% da altura do item */
+    object-fit: cover; /* Cobre o espaço do item sem distorcer */
+    border-radius: 5px; /* Bordas arredondadas para imagens */
+}
+
+/* Anúncios */
+.ads {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.ads h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333; /* Cor de texto */
+}
+
+/* Grade de anúncios */
+.ad-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    grid-gap: 20px; /* Espaçamento entre os itens */
+}
+
+/* Estilização dos itens de anúncio */
+.ad-item {
+    background-color: #f9f9f9;
+    padding: 15px; /* Aumentado para mais conforto */
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%; /* Garante que o anúncio ocupe a largura da coluna */
+    max-width: 250px; /* Limita a largura máxima de cada anúncio */
+    transition: transform 0.3s ease; /* Efeito de zoom */
+}
+
+.ad-item:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
+}
+
+.ad-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordas arredondadas para imagens */
+    margin-bottom: 10px;
+}
+
+.ad-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #555; /* Cor de texto mais suave */
+}
+
+/* Estilos para animações e transições suaves */
+.ad-item,
+.product-item,
+.promotions,
+.filters {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para sombra e transformação */
+}
+
+/* Animações de carregamento */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa a altura da tela */
+}
+
+.loading span {
+    font-size: 24px;
+    color: #e67e22; /* Cor do texto de carregamento */
+}
