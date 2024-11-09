@@ -193,7 +193,9 @@
     .form-section input,
     .form-section select,
     .form-section textarea {
-        padding: 18px;
+        padding: 10px;
+        width: 90%;
+        max-width: 90%;
     }
 
     .image-preview img {
