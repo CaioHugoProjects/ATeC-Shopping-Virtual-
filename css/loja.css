@@ -7,6 +7,7 @@ body {
     background-color: #f4f4f4; /* Cor de fundo suave */
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 /* ========================= Estilo do Conteúdo Principal ========================= */
