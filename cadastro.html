@@ -45,8 +45,7 @@
             </form>
         </div>
     </header>
-
-    <!-- Área de Exibição -->
+ 
     <main>
         <div class="main-content">
             <!-- Formulário de Cadastro de Loja -->
@@ -163,7 +162,55 @@
             <button onclick="toggleForm('login')">Login de Loja</button>
         </div>
     </main>
-
+    <script>
+        // Função para capturar os dados do formulário de cadastro
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();  // Previne o envio do formulário de forma tradicional
+    
+            // Captura os dados dos campos do formulário
+            const formData = new FormData();
+            formData.append('store-image', document.getElementById('store-image').files[0]);  // Imagem da loja
+            formData.append('store-name', document.getElementById('store-name').value);
+            formData.append('owner-name', document.getElementById('owner-name').value);
+            formData.append('email', document.getElementById('email').value);
+            formData.append('password', document.getElementById('password').value);
+            formData.append('confirm-password', document.getElementById('confirm-password').value);
+            formData.append('phone', document.getElementById('phone').value);
+            formData.append('address', document.getElementById('address').value);
+            formData.append('description', document.getElementById('description').value);
+            formData.append('category', document.getElementById('category').value);
+            formData.append('store-images', document.getElementById('store-images').files); // Imagens da loja
+            formData.append('social-media', document.getElementById('social-media').value);
+            formData.append('store-hours', document.getElementById('store-hours').value);
+    
+            // Adiciona a validação de senhas no JavaScript
+            if (document.getElementById('password').value !== document.getElementById('confirm-password').value) {
+                alert('As senhas não correspondem!');
+                return;
+            }
+    
+            // Envia os dados para o servidor via POST
+            fetch('php/cadastrar_loja.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Lida com a resposta do servidor
+                if (data.success) {
+                    alert('Loja cadastrada com sucesso!');
+                    window.location.href = 'loja.html'; // Redireciona para outra página (por exemplo, página da loja)
+                } else {
+                    alert('Erro ao cadastrar loja: ' + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Ocorreu um erro ao tentar enviar os dados.');
+            });
+        });
+    </script>
+    
     <footer>
         <div class="footer-container">
             <div class="footer-section">
