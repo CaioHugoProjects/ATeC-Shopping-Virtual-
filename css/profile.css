@@ -111,7 +111,7 @@
 .add-product button, .add-promotion button, .add-advertisement button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #e67e22;
+    background-color: #030fb6;
     color: white;
     border: none;
     border-radius: 5px;
@@ -120,7 +120,7 @@
 }
 
 .add-product button:hover, .add-promotion button:hover, .add-advertisement button:hover {
-    background-color: #d35400;
+    background-color:rgb(11, 2, 100);
 }
 
 /* ===================== Responsividade ===================== */
