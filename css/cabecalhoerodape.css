@@ -238,7 +238,7 @@ footer {
     form input[type="search"] {
         padding: 6px;
         font-size: 12px;
-        width: 60%;
+        max-width: 60%;
     }
 
     form button {
