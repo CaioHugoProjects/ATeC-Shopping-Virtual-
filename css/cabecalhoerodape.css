@@ -8,6 +8,13 @@ body {
     color: #2c3e50;
 }
 
+/* Controlando o tamanho máximo das imagens para evitar que quebrem o layout */
+img {
+    max-width: 100%;  /* Garante que a imagem nunca ultrapasse o container */
+    height: auto;     /* Mantém a proporção da imagem */
+    display: block;   /* Evita o espaçamento indesejado abaixo da imagem */
+}
+
 /* ========================= Cabeçalho ========================= */
 
 header {
@@ -214,9 +221,6 @@ footer {
         padding: 8px 16px;
         font-size: 14px;
     }
-    .footer-section img {
-        max-width: 758px;
-    }
 
     .footer-section h3 {
         font-size: 16px;
@@ -250,9 +254,6 @@ footer {
 
     .footer-section h3 {
         font-size: 14px;
-    }
-    .footer-section img{
-        max-width: 470px;
     }
 
     .lastline {
