@@ -165,7 +165,6 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    align-items: center;
 }
 
 .ad-item {
@@ -205,7 +204,6 @@ body {
     }
     .ad-list {
         grid-template-columns: repeat(2, 1fr);
-        align-items: center;
     }
 }
 
@@ -216,7 +214,6 @@ body {
     }
     .ad-list {
         grid-template-columns: repeat(1, 1fr);
-        align-items: center;
     }
     .filters form {
         flex-direction: column;
@@ -230,6 +227,5 @@ body {
     }
     .ad-list {
         grid-template-columns: 1fr;
-        align-items: center;
     }
 }
