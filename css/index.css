@@ -176,6 +176,7 @@ body {
     width: 100%;
     max-width: 250px;
     transition: transform 0.3s ease;
+    justify-content: center;
 }
 
 .ad-item:hover {
