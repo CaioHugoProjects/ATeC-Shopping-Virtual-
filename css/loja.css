@@ -1,8 +1,10 @@
 /* ========================= Estilo do Conteúdo Principal ========================= */
 .main-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start;
     padding: 30px;
+    gap: 20px; /* Espaço entre os elementos */
     flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
 
@@ -12,8 +14,12 @@
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 300px;
+    max-width: 300px; /* Largura máxima para evitar expansão excessiva */
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o conteúdo */
+    padding: 20px;
 }
 
 .filter-sidebar h2 {
@@ -22,11 +28,14 @@
     color: #333;
     border-bottom: 2px solid #030fb6;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .filter-sidebar form {
+    width: 100%; /* Ocupa toda a largura disponível */
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .filter-sidebar label {
@@ -41,6 +50,7 @@
     border: 2px solid #2c3e50;
     border-radius: 5px;
     font-size: 1em;
+    width: 100%; /* Largura total dentro do formulário */
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -69,6 +79,9 @@
     max-width: 700px;
     height: 500px;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .store-list h2 {
@@ -77,9 +90,12 @@
     color: #333;
     border-bottom: 2px solid #030fb6;
     padding-bottom: 10px;
+    text-align: center;
 }
 
 .store-item {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -102,11 +118,13 @@
 .store-item h3 {
     margin: 10px 0 5px;
     color: #2c3e50;
+    text-align: center;
 }
 
 .store-item p {
     margin: 0 0 10px;
     color: #555;
+    text-align: center;
 }
 
 .store-item a {
@@ -130,6 +148,9 @@
     margin-bottom: 20px;
     width: 100%;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .ads h2 {
@@ -143,6 +164,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    justify-items: center; /* Centraliza itens dentro da grid */
 }
 
 .ad-item {
@@ -180,19 +202,20 @@
     }
     
     .store-list {
-        max-width: 100%; /* Ocupa a largura total */
-        height: auto; /* Altura ajustável */
+        max-width: 100%;
+        height: auto;
     }
 }
 
 @media (max-width: 768px) {
     .main-content {
-        flex-direction: column; /* Elementos em coluna em telas pequenas */
+        flex-direction: column;
         align-items: center;
     }
     
-    .filter-sidebar, .ads {
-        max-width: 100%; /* Expande a largura para o máximo */
+    .filter-sidebar, .ads, .store-list {
+        max-width: 100%;
+        align-items: center;
     }
     
     .ad-list {
@@ -202,7 +225,7 @@
     .store-list h2,
     .filter-sidebar h2,
     .ads h2 {
-        font-size: 1.3em; /* Reduz o tamanho do título */
+        font-size: 1.3em;
     }
 }
 
@@ -210,16 +233,16 @@
     .filter-sidebar h2,
     .store-list h2,
     .ads h2 {
-        font-size: 1.2em; /* Tamanho menor para o título */
+        font-size: 1.2em;
     }
 
     .ad-item p {
-        font-size: 12px; /* Fonte menor para texto */
+        font-size: 12px;
     }
 
     .filter-sidebar select,
     .filter-sidebar button,
     .ad-item {
-        padding: 10px; /* Reduz o padding para economizar espaço */
+        padding: 10px;
     }
 }
