@@ -4,8 +4,8 @@
 .main-content {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
-    align-items: flex-start;
-    padding: 10px;
+    align-items: center;
+    padding: 20px;
     gap: 20px; /* Espaço entre os elementos */
     flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
