@@ -134,7 +134,7 @@ footer {
 .footer-section textarea,
 .footer-section input[type="text"],
 .footer-section button {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 2px solid #6aceff;
     border-radius: 5px;
