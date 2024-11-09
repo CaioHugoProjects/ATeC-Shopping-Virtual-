@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 
 // Configuração do servidor Express
 const app = express();
-const port = 3000;
+const port = 3306;
 
 // Configuração do banco de dados MySQL
 const db = mysql.createConnection({
@@ -78,5 +78,5 @@ function generateHexId() {
 
 // Iniciar o servidor
 app.listen(port, () => {
-  console.log(`Servidor rodando na porta ${port}`);
+  console.log(`Servidor rodando na porta ${3306}`);
 });
