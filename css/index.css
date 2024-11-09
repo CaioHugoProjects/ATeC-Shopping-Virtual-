@@ -1,13 +1,13 @@
-/* Estilos Globais */
+/* ========================= Estilos Globais ========================= */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Cor de fundo suave */
+    background-color: #f4f4f4;
 }
 
-/* Estilo do Conteúdo Principal */
+/* ========================= Conteúdo Principal ========================= */
 .content-container {
     display: flex;
     flex-direction: column;
@@ -15,23 +15,23 @@ body {
     padding: 20px;
 }
 
-/* Promoções */
+/* ========================= Promoções ========================= */
 .promotions {
     background-color: #fff;
     padding: 15px;
-    border-radius: 8px; /* Bordas mais arredondadas */
+    border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease; /* Transição para sombra */
+    transition: box-shadow 0.3s ease;
 }
 
 .promotions:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .promotion-slider {
     position: relative;
     overflow: hidden;
-    height: 200px; /* Ajuste a altura conforme necessário */
+    height: 200px;
 }
 
 .promotion-slide {
@@ -51,7 +51,7 @@ body {
     opacity: 1;
 }
 
-/* Seção de Filtros e Produtos */
+/* ========================= Filtros e Produtos ========================= */
 .products-container {
     display: flex;
     flex-direction: column;
@@ -61,15 +61,15 @@ body {
 /* Filtros */
 .filters {
     background-color: #fff;
-    padding: 20px; /* Aumentado para mais espaço */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px; /* Espaçamento entre filtros e produtos */
-    transition: box-shadow 0.3s ease; /* Transição para sombra */
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
 }
 
 .filters:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao passar o mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .filters form {
@@ -92,17 +92,17 @@ body {
 
 .filters button {
     padding: 10px 20px;
-    background-color: #030fb6; /* Cor laranja */
+    background-color: #030fb6;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .filters button:hover {
-    background-color:rgb(11, 2, 100); /* Tom mais escuro */
-    transform: scale(1.05); /* Efeito de zoom */
+    background-color: rgb(11, 2, 100);
+    transform: scale(1.05);
 }
 
 /* Produtos */
@@ -111,9 +111,9 @@ body {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Produtos ocupam a maior parte do espaço */
-    overflow-y: auto; /* Rolagem vertical se necessário */
-    height: 85vh; /* Para dar destaque aos produtos */
+    flex-grow: 1;
+    overflow-y: auto;
+    height: 85vh;
 }
 
 .product-list {
@@ -122,32 +122,31 @@ body {
     gap: 20px;
 }
 
-/* Tamanho fixo dos itens de produtos */
 .product-item {
-    flex: 1 1 calc(20% - 20px); /* Itens ocupam 20% da largura */
+    flex: 1 1 calc(20% - 20px);
     background-color: #f9f9f9;
-    padding: 15px; /* Aumentado para mais conforto */
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    height: 250px; /* Altura fixa para os itens de produto */
-    position: relative; /* Para posicionamento da imagem */
-    overflow: hidden; /* Para ocultar partes da imagem que ultrapassam */
-    transition: transform 0.3s ease; /* Efeito de zoom */
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .product-item:hover {
-    transform: scale(1.03); /* Efeito de zoom ao passar o mouse */
+    transform: scale(1.03);
 }
 
 .product-item img {
     max-width: 100%;
-    height: 100%; /* A altura da imagem ocupa 100% da altura do item */
-    object-fit: cover; /* Cobre o espaço do item sem distorcer */
-    border-radius: 5px; /* Bordas arredondadas para imagens */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-/* Anúncios */
+/* ========================= Anúncios ========================= */
 .ads {
     background-color: #fff;
     padding: 15px;
@@ -159,62 +158,74 @@ body {
 .ads h2 {
     margin-bottom: 20px;
     text-align: center;
-    color: #333; /* Cor de texto */
+    color: #333;
 }
 
-/* Grade de anúncios */
 .ad-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas */
-    grid-gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
-/* Estilização dos itens de anúncio */
 .ad-item {
     background-color: #f9f9f9;
-    padding: 15px; /* Aumentado para mais conforto */
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Garante que o anúncio ocupe a largura da coluna */
-    max-width: 250px; /* Limita a largura máxima de cada anúncio */
-    transition: transform 0.3s ease; /* Efeito de zoom */
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
 }
 
 .ad-item:hover {
-    transform: scale(1.05); /* Zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .ad-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px; /* Bordas arredondadas para imagens */
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
 .ad-item p {
     margin: 0;
     font-size: 14px;
-    color: #555; /* Cor de texto mais suave */
+    color: #555;
 }
 
-/* Estilos para animações e transições suaves */
-.ad-item,
-.product-item,
-.promotions,
-.filters {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para sombra e transformação */
+/* ========================= Responsividade ========================= */
+
+/* Telas menores que 1024px */
+@media (max-width: 1024px) {
+    .product-item {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+    .ad-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Animações de carregamento */
-.loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Ocupa a altura da tela */
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .ad-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .filters form {
+        flex-direction: column;
+    }
 }
 
-.loading span {
-    font-size: 24px;
-    color: #e67e22; /* Cor do texto de carregamento */
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 1 100%;
+    }
+    .ad-list {
+        grid-template-columns: 1fr;
+    }
 }
