@@ -1,38 +1,82 @@
-// server.js
 const express = require('express');
-const mysql = require('mysql');
-const app = express();
-const PORT = 3306;
+const mysql = require('mysql2');
+const multer = require('multer');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-// Configuração da conexão com o banco de dados MySQL
+// Configuração do servidor Express
+const app = express();
+const port = 3000;
+
+// Configuração do banco de dados MySQL
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'root',      // substitua pelo seu usuário do MySQL
-  password: '',      // substitua pela sua senha do MySQL
-  database: 'ATeC_Shopping' // substitua pelo nome do seu banco
+  user: 'root',  // Seu usuário do MySQL
+  password: '',  // Sua senha do MySQL
+  database: 'atec_shopping'  // Nome do banco de dados
 });
 
-// Conecta ao banco de dados
+// Conectar ao banco de dados
 db.connect((err) => {
   if (err) {
-    console.error('Erro ao conectar ao banco de dados:', err);
+    console.error('Erro ao conectar no banco de dados: ' + err.stack);
     return;
   }
-  console.log('Conectado ao banco de dados MySQL!');
+  console.log('Conectado ao banco de dados.');
 });
 
-// Rota para pegar dados do banco
-app.get('/dados', (req, res) => {
-  const query = 'SELECT * FROM sua_tabela'; // substitua por sua tabela
-  db.query(query, (err, results) => {
+// Configuração do Multer para upload de arquivos
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+
+// Middleware para parsear o corpo da requisição
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+// Rota para cadastrar a loja
+app.post('/cadastrar-loja', upload.single('store-image'), (req, res) => {
+  const {
+    storeName,
+    ownerName,
+    email,
+    password,
+    phone,
+    address,
+    description,
+    category,
+    socialMedia,
+    storeHours
+  } = req.body;
+
+  // Verificar se a senha e a confirmação da senha são iguais
+  if (password !== req.body['confirm-password']) {
+    return res.status(400).json({ success: false, message: 'As senhas não correspondem.' });
+  }
+
+  // Gerar ID hexadecimal aleatório para a loja
+  const storeId = generateHexId();
+
+  // Verificar se a imagem foi enviada
+  const storeImage = req.file ? req.file.buffer : null;
+
+  // Inserir dados no banco de dados
+  const query = 'INSERT INTO lojas (id, nome_loja, nome_proprietario, email, senha, telefone, endereco, descricao, categoria, imagem_logo, redes_sociais, horario_funcionamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
+  db.query(query, [storeId, storeName, ownerName, email, password, phone, address, description, category, storeImage, socialMedia, storeHours], (err, results) => {
     if (err) {
-      res.status(500).send(err);
-    } else {
-      res.json(results); // Retorna os dados como JSON
+      console.error('Erro ao cadastrar a loja: ' + err.stack);
+      return res.status(500).json({ success: false, message: 'Erro no banco de dados.' });
     }
+
+    res.status(200).json({ success: true, message: 'Loja cadastrada com sucesso!' });
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${3306}`);
+// Função para gerar ID hexadecimal aleatório
+function generateHexId() {
+  return 'xxxx-xxxx-xxxx-xxxx'.replace(/[x]/g, () => Math.floor(Math.random() * 16).toString(16));
+}
+
+// Iniciar o servidor
+app.listen(port, () => {
+  console.log(`Servidor rodando na porta ${port}`);
 });
