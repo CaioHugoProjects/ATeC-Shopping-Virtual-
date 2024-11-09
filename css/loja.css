@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4; /* Cor de fundo suave */
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
