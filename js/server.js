@@ -2,14 +2,14 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const PORT = 3000;
+const PORT = 3306;
 
 // Configuração da conexão com o banco de dados MySQL
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',      // substitua pelo seu usuário do MySQL
   password: '',      // substitua pela sua senha do MySQL
-  database: 'nome_do_seu_banco' // substitua pelo nome do seu banco
+  database: 'ATeC_Shopping' // substitua pelo nome do seu banco
 });
 
 // Conecta ao banco de dados
@@ -34,5 +34,5 @@ app.get('/dados', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em http://localhost:${3306}`);
 });
