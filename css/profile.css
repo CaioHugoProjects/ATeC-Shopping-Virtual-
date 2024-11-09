@@ -1,4 +1,4 @@
-/* Estilo do Conteúdo Principal */
+/* ===================== Estilo do Conteúdo Principal ===================== */
 .profile-container {
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     margin: 0 auto;
 }
 
-/* Informações da Loja */
+/* ===================== Informações da Loja ===================== */
 .store-info {
     background-color: #fff;
     padding: 20px;
@@ -19,6 +19,7 @@
 .store-info .store-details {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .store-info .store-logo img {
@@ -31,15 +32,11 @@
     max-width: 500px;
 }
 
-.store-info h1 {
+.store-info h1, .store-info h2 {
     margin-bottom: 20px;
 }
 
-.store-info h2 {
-    margin-bottom: 10px;
-}
-
-/* Produtos da Loja */
+/* ===================== Produtos da Loja ===================== */
 .store-products {
     background-color: #fff;
     padding: 20px;
@@ -56,6 +53,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .product-item {
@@ -80,11 +78,8 @@
     margin: 0 0 10px;
 }
 
-/* Adicionar Novo Produto */
-.add-product,
-.add-promotion,
-.add-advertisement,
-.admin-panel {
+/* ===================== Adicionar Novo Produto / Promoção / Anúncio ===================== */
+.add-product, .add-promotion, .add-advertisement, .admin-panel {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -92,46 +87,31 @@
     margin-bottom: 20px;
 }
 
-.add-product h2,
-.add-promotion h2,
-.add-advertisement h2,
-.admin-panel h2 {
+.add-product h2, .add-promotion h2, .add-advertisement h2, .admin-panel h2 {
     margin-bottom: 20px;
 }
 
-.add-product form,
-.add-promotion form,
-.add-advertisement form,
-.admin-panel form {
+.add-product form, .add-promotion form, .add-advertisement form, .admin-panel form {
     display: flex;
     flex-direction: column;
 }
 
-.add-product label,
-.add-promotion label,
-.add-advertisement label,
-.admin-panel label {
+.add-product label, .add-promotion label, .add-advertisement label, .admin-panel label {
     margin-top: 10px;
 }
 
-.add-product input,
-.add-promotion input,
-.add-advertisement input,
-.add-product textarea,
-.add-promotion textarea,
-.add-advertisement textarea {
+.add-product input, .add-promotion input, .add-advertisement input, 
+.add-product textarea, .add-promotion textarea, .add-advertisement textarea {
     margin-top: 5px;
     padding: 10px;
-    border: 2px solid #2c3e50; /* Cinza Escuro */
+    border: 2px solid #2c3e50;
     border-radius: 5px;
 }
 
-.add-product button,
-.add-promotion button,
-.add-advertisement button {
+.add-product button, .add-promotion button, .add-advertisement button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #e67e22; /* Laranja */
+    background-color: #e67e22;
     color: white;
     border: none;
     border-radius: 5px;
@@ -139,8 +119,52 @@
     transition: background-color 0.3s ease;
 }
 
-.add-product button:hover,
-.add-promotion button:hover,
-.add-advertisement button:hover {
-    background-color: #d35400; /* Tom mais escuro de laranja */
+.add-product button:hover, .add-promotion button:hover, .add-advertisement button:hover {
+    background-color: #d35400;
+}
+
+/* ===================== Responsividade ===================== */
+@media (max-width: 1024px) {
+    .product-item {
+        width: calc(50% - 20px); /* Reduz para duas colunas */
+    }
+}
+
+@media (max-width: 768px) {
+    .store-info .store-details {
+        flex-direction: column;
+        align-items: center; /* Centraliza logo e detalhes */
+    }
+
+    .store-info .store-logo img {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    .store-info .store-details-text {
+        max-width: 100%; /* Largura completa para os textos */
+    }
+
+    .product-item {
+        width: 100%; /* Cada item ocupa a linha inteira */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-container {
+        padding: 10px;
+    }
+
+    .store-info h1, .store-info h2, .store-products h2 {
+        font-size: 1.2em; /* Reduz tamanho dos títulos */
+    }
+
+    .add-product input, .add-promotion input, .add-advertisement input, 
+    .add-product textarea, .add-promotion textarea, .add-advertisement textarea {
+        padding: 8px; /* Ajusta padding para inputs e textarea */
+    }
+
+    .add-product button, .add-promotion button, .add-advertisement button {
+        padding: 8px 16px;
+    }
 }
