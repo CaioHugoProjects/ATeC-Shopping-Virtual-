@@ -16,7 +16,7 @@ body {
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
     align-items: flex-start;
-    padding: 30px;
+    padding: 10px;
     gap: 20px; /* Espaço entre os elementos */
     flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
