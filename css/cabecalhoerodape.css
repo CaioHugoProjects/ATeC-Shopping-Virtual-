@@ -248,6 +248,9 @@ footer {
     .footer-section h3 {
         font-size: 14px;
     }
+    .footer-section img{
+        max-width: 470px;
+    }
 
     .lastline {
         font-size: 12px;
