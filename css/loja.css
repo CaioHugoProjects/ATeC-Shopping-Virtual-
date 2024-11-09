@@ -1,24 +1,27 @@
-/* Estilo do Conteúdo Principal */
+/* ========================= Estilo do Conteúdo Principal ========================= */
 .main-content {
+    display: flex;
     justify-content: space-between;
     padding: 30px;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
 }
 
-/* Sidebar de Filtros */
+/* ========================= Sidebar de Filtros ========================= */
 .filter-sidebar {
     background-color: #ffffff;
-    border-radius: 10px; /* Bordas mais arredondadas */
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ocupa 100% da largura */
-    margin-bottom: 20px; /* Espaçamento inferior */
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
 .filter-sidebar h2 {
     margin-bottom: 20px;
-    font-size: 1.5em; /* Aumenta o tamanho do título */
-    color: #333; /* Cor do texto */
-    border-bottom: 2px solid #030fb6; /* Linha abaixo do título */
-    padding-bottom: 10px; /* Espaçamento inferior */
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #030fb6;
+    padding-bottom: 10px;
 }
 
 .filter-sidebar form {
@@ -28,51 +31,52 @@
 
 .filter-sidebar label {
     margin-top: 15px;
-    font-weight: bold; /* Negrito para melhor destaque */
+    font-weight: bold;
 }
 
 .filter-sidebar select,
 .filter-sidebar button {
     margin-top: 10px;
-    padding: 12px; /* Aumenta o padding para botões e selects */
-    border: 2px solid #2c3e50; /* Cinza Escuro */
+    padding: 12px;
+    border: 2px solid #2c3e50;
     border-radius: 5px;
-    font-size: 1em; /* Tamanho de fonte maior */
-    transition: border-color 0.3s ease, background-color 0.3s ease; /* Transições */
+    font-size: 1em;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .filter-sidebar select:focus,
 .filter-sidebar button:focus {
-    border-color: #030fb6; /* Cor ao focar */
+    border-color: #030fb6;
 }
 
 .filter-sidebar button {
-    background-color: #030fb6; /* Cor do botão */
+    background-color: #030fb6;
     color: white;
     cursor: pointer;
 }
 
 .filter-sidebar button:hover {
-    background-color: rgb(11, 2, 100); /* Tom mais escuro ao passar o mouse */
+    background-color: rgb(11, 2, 100);
 }
 
-/* Lista de Lojas */
+/* ========================= Lista de Lojas ========================= */
 .store-list {
     background-color: #ffffff;
     padding: 20px;
-    border-radius: 10px; /* Bordas mais arredondadas */
+    border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Ocupa 100% da largura */
-    height: 500px; /* Definindo uma altura fixa */
-    overflow-y: auto; /* Rolagem vertical quando necessário */
+    width: 100%;
+    max-width: 700px;
+    height: 500px;
+    overflow-y: auto;
 }
 
 .store-list h2 {
     margin-bottom: 20px;
-    font-size: 1.5em; /* Aumenta o tamanho do título */
-    color: #333; /* Cor do texto */
-    border-bottom: 2px solid #030fb6; /* Linha abaixo do título */
-    padding-bottom: 10px; /* Espaçamento inferior */
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #030fb6;
+    padding-bottom: 10px;
 }
 
 .store-item {
@@ -81,13 +85,13 @@
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 5px;
-    background-color: #f9f9f9; /* Fundo claro para os itens */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições */
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .store-item:hover {
-    transform: translateY(-5px); /* Efeito de deslocamento ao passar o mouse */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .store-item img {
@@ -97,78 +101,125 @@
 
 .store-item h3 {
     margin: 10px 0 5px;
-    color: #2c3e50; /* Cor do título */
+    color: #2c3e50;
 }
 
 .store-item p {
     margin: 0 0 10px;
-    color: #555; /* Cor do texto do parágrafo */
+    color: #555;
 }
 
 .store-item a {
-    color: #030fb6; /* Cor do link */
+    color: #030fb6;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease; /* Transição de cor */
+    transition: color 0.3s ease;
 }
 
 .store-item a:hover {
-    color: rgb(11, 2, 100); /* Tom mais escuro de azul */
-    text-decoration: underline; /* Sublinhado ao passar o mouse */
+    color: rgb(11, 2, 100);
+    text-decoration: underline;
 }
 
-/* Anúncios */
+/* ========================= Anúncios ========================= */
 .ads {
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
 }
 
 .ads h2 {
     margin-bottom: 20px;
     text-align: center;
-    color: #333; /* Cor de texto */
+    color: #333;
 }
 
-/* Grade de anúncios */
+/* Grade de Anúncios */
 .ad-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas */
-    grid-gap: 20px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
 }
 
-/* Estilização dos itens de anúncio */
 .ad-item {
     background-color: #f9f9f9;
-    padding: 15px; /* Aumentado para mais conforto */
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 100%; /* Garante que o anúncio ocupe a largura da coluna */
-    max-width: 250px; /* Limita a largura máxima de cada anúncio */
-    transition: transform 0.3s ease; /* Efeito de zoom */
+    width: 100%;
+    max-width: 250px;
+    transition: transform 0.3s ease;
 }
 
 .ad-item:hover {
-    transform: scale(1.05); /* Zoom ao passar o mouse */
+    transform: scale(1.05);
 }
 
 .ad-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px; /* Bordas arredondadas para imagens */
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
 .ad-item p {
     margin: 0;
     font-size: 14px;
-    color: #555; /* Cor de texto mais suave */
+    color: #555;
 }
 
-/* Estilos para animações e transições suaves */
-.ad-item {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para sombra e transformação */
+/* ========================= Responsividade ========================= */
+@media (max-width: 1024px) {
+    .ad-list {
+        grid-template-columns: repeat(2, 1fr); /* Ajuste para duas colunas */
+    }
+    
+    .store-list {
+        max-width: 100%; /* Ocupa a largura total */
+        height: auto; /* Altura ajustável */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Elementos em coluna em telas pequenas */
+        align-items: center;
+    }
+    
+    .filter-sidebar, .ads {
+        max-width: 100%; /* Expande a largura para o máximo */
+    }
+    
+    .ad-list {
+        grid-template-columns: 1fr; /* Uma coluna para anúncios */
+    }
+
+    .store-list h2,
+    .filter-sidebar h2,
+    .ads h2 {
+        font-size: 1.3em; /* Reduz o tamanho do título */
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-sidebar h2,
+    .store-list h2,
+    .ads h2 {
+        font-size: 1.2em; /* Tamanho menor para o título */
+    }
+
+    .ad-item p {
+        font-size: 12px; /* Fonte menor para texto */
+    }
+
+    .filter-sidebar select,
+    .filter-sidebar button,
+    .ad-item {
+        padding: 10px; /* Reduz o padding para economizar espaço */
+    }
 }
