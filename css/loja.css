@@ -204,7 +204,7 @@
     }
     
     .store-list {
-        max-width: 100%;
+        max-width: 95%;
         height: auto;
     }
 }
@@ -216,7 +216,7 @@
     }
     
     .filter-sidebar, .ads, .store-list {
-        max-width: 100%;
+        max-width: 95%;
         align-items: center;
     }
     
