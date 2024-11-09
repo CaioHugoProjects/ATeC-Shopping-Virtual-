@@ -176,7 +176,6 @@ body {
     width: 100%;
     max-width: 250px;
     transition: transform 0.3s ease;
-    justify-content: center;
 }
 
 .ad-item:hover {
@@ -205,6 +204,7 @@ body {
     }
     .ad-list {
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
     }
 }
 
@@ -215,6 +215,7 @@ body {
     }
     .ad-list {
         grid-template-columns: repeat(1, 1fr);
+        align-items: center;
     }
     .filters form {
         flex-direction: column;
@@ -228,5 +229,6 @@ body {
     }
     .ad-list {
         grid-template-columns: 1fr;
+        align-items: center;
     }
 }
